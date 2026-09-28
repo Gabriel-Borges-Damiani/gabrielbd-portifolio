@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --background: #050507;
+  --surface: #0d0d12;
+  --surface-light: #14141c;
+  --text: #f5f3fa;
+  --muted: #92909d;
+  --violet: #8b5cf6;
+  --violet-light: #a78bfa;
+  --border: rgba(255, 255, 255, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: "Manrope", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background:
+    radial-gradient(
+      circle at 70% 10%,
+      rgba(124, 58, 237, 0.12),
+      transparent 25rem
+    ),
+    var(--background);
+}
+
+/* STARS */
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: twinkle 4s infinite ease-in-out;
+}
+
+.star-1 {
+  top: 15%;
+  left: 8%;
+}
+
+.star-2 {
+  top: 30%;
+  right: 12%;
+  animation-delay: 1s;
+}
+
+.star-3 {
+  top: 65%;
+  left: 18%;
+  animation-delay: 2s;
+}
+
+.star-4 {
+  top: 80%;
+  right: 25%;
+  animation-delay: 0.5s;
+}
+
+.star-5 {
+  top: 10%;
+  right: 35%;
+  animation-delay: 3s;
+}
+
+.star-6 {
+  top: 48%;
+  right: 5%;
+  animation-delay: 1.5s;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scale(1.8);
+  }
+}
+
+/* HEADER */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.5rem 5vw;
+
+  background: rgba(5, 5, 7, 0.7);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--violet-light);
+}
+
+.header nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.header nav a {
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.header nav a:hover {
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+.section {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  padding: 8rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.section-heading span {
+  color: var(--violet-light);
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: -0.05em;
+}
