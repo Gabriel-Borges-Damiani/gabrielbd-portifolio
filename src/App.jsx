@@ -159,5 +159,75 @@ function App() {
             </div>
           </div>
         </section>
+                
+        <section id="projetos" className="section projects">
+          <div className="section-heading">
+            <span>02</span>
+            <h2>Projetos</h2>
+          </div>
+
+          <div className="projects-grid">
+            {projects.map((project, index) => (
+              <article className="project-card" key={project.title}>
+                <div className="project-image">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={`Preview do projeto ${project.title}`}
+                    />
+                  ) : (
+                    <div className="image-placeholder">
+                      <span>PROJECT {String(index + 1).padStart(2, "0")}</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="project-info">
+                  <div className="project-top">
+                    <h3>{project.title}</h3>
+
+                    <a
+                      href={project.link}
+                      aria-label={`Ver projeto ${project.title}`}
+                    >
+                      ↗
+                    </a>
+                  </div>
+
+                  <p>{project.description}</p>
+
+                  <div className="technologies">
+                    {project.technologies.map((technology) => (
+                      <span key={technology}>{technology}</span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        
+        <section id="competencias" className="section skills">
+          <div className="section-heading">
+            <span>03</span>
+            <h2>Competências</h2>
+          </div>
+
+          <div className="skills-content">
+            <p className="skills-intro">
+              Ferramentas e tecnologias que fazem parte da minha jornada.
+            </p>
+
+            <div className="skills-list">
+              {skills.map((skill) => (
+                <div className="skill" key={skill}>
+                  <span>{skill}</span>
+                  <span className="skill-arrow">↗</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
     

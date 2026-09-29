@@ -341,3 +341,146 @@ a {
 .about-text p + p {
   margin-top: 1.5rem;
 }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(167, 139, 250, 0.45);
+}
+
+.project-image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--surface-light);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  background:
+    radial-gradient(circle at center, rgba(124, 58, 237, 0.2), transparent 60%),
+    #0a0a0f;
+
+  color: rgba(255, 255, 255, 0.3);
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .image-placeholder {
+  transform: scale(1.05);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-top h3 {
+  font-size: 1.2rem;
+}
+
+.project-top a {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.project-top a:hover {
+  background: var(--violet);
+  border-color: var(--violet);
+}
+
+.project-info > p {
+  min-height: 4.8rem;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.technologies span {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+}
+
+.skills-content {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 5rem;
+}
+
+.skills-intro {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.3rem 0;
+  border-bottom: 1px solid var(--border);
+
+  font-size: 1.05rem;
+
+  transition:
+    color 0.3s ease,
+    padding 0.3s ease;
+}
+
+.skill:hover {
+  color: var(--violet-light);
+  padding-left: 0.5rem;
+}
+
+.skill-arrow {
+  color: var(--muted);
+}
