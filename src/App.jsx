@@ -229,5 +229,71 @@ function App() {
             </div>
           </div>
         </section>
+                
+        <section className="section qualities">
+          <div className="section-heading">
+            <span>04</span>
+            <h2>Por que me contratar?</h2>
+          </div>
+
+          <p className="qualities-intro">
+            Algumas características que levo para cada projeto.
+          </p>
+
+          <div className="qualities-grid">
+            {qualities.map((quality) => (
+              <article className="quality-card" key={quality.title}>
+                <div className="quality-short">
+                  <span className="quality-icon">✦</span>
+                  <h3>{quality.title}</h3>
+                  <p>{quality.short}</p>
+                </div>
+
+                <div className="quality-expanded">
+                  <h3>{quality.title}</h3>
+                  <p>{quality.long}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="contato" className="section contact">
+          <div className="contact-inner">
+            <p className="eyebrow">VAMOS CONVERSAR?</p>
+
+            <h2>
+              Tem uma ideia?
+              <span>Vamos construir.</span>
+            </h2>
+
+            <p>
+              Estou aberto a novos projetos, oportunidades e conversas sobre
+              tecnologia.
+            </p>
+
+            <div className="contact-links">
+              <a href="#" className="contact-link">
+                <span>LinkedIn</span>
+                <span>↗</span>
+              </a>
+
+              <a href="#" className="contact-link">
+                <span>WhatsApp</span>
+                <span>↗</span>
+              </a>
+
+              <a href="mailto:seuemail@email.com" className="contact-link">
+                <span>E-mail</span>
+                <span>↗</span>
+              </a>
+
+              <a href="#" className="contact-link">
+                <span>GitHub</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
     
