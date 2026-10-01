@@ -3,24 +3,21 @@ import "./App.css";
 const projects = [
   {
     title: "Projeto",
-    description:
-      ".",
+    description: ".",
     image: "",
     link: "#",
     technologies: ["React", "JavaScript"],
   },
   {
     title: "Projeto",
-    description:
-      ".",
+    description: ".",
     image: "",
     link: "#",
     technologies: ["React", "CSS"],
   },
   {
     title: "Projeto",
-    description:
-      ".",
+    description: ".",
     image: "",
     link: "#",
     technologies: ["JavaScript", "API"],
@@ -63,7 +60,6 @@ const qualities = [
 
 function App() {
   return (
-    
     <div className="app">
       <div className="stars" aria-hidden="true">
         <span className="star star-1" />
@@ -87,8 +83,7 @@ function App() {
         </nav>
       </header>
 
-      <main> 
-                
+      <main>
         <section id="inicio" className="hero section">
           <div className="hero-content">
             <p className="eyebrow">DESENVOLVEDOR & CRIADOR</p>
@@ -99,8 +94,8 @@ function App() {
             </h1>
 
             <p className="hero-description">
-              Transformando ideias em experiências digitais modernas,
-              funcionais e memoráveis.
+              Transformando ideias em experiências digitais modernas, funcionais
+              e memoráveis.
             </p>
 
             <div className="hero-buttons">
@@ -125,7 +120,6 @@ function App() {
           </div>
         </section>
 
-        
         <section id="sobre" className="section about">
           <div className="section-heading">
             <span>01</span>
@@ -159,7 +153,7 @@ function App() {
             </div>
           </div>
         </section>
-                
+
         <section id="projetos" className="section projects">
           <div className="section-heading">
             <span>02</span>
@@ -207,7 +201,6 @@ function App() {
           </div>
         </section>
 
-        
         <section id="competencias" className="section skills">
           <div className="section-heading">
             <span>03</span>
@@ -229,7 +222,7 @@ function App() {
             </div>
           </div>
         </section>
-                
+
         <section className="section qualities">
           <div className="section-heading">
             <span>04</span>
@@ -296,4 +289,17 @@ function App() {
           </div>
         </section>
       </main>
-    
+      <footer>
+        <div className="footer-logo">GBD</div>
+
+        <p>© {new Date().getFullYear()} Gabriel Borges Damiani.</p>
+
+        <a href="#inicio" aria-label="Voltar ao início">
+          ↑
+        </a>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
