@@ -2,59 +2,73 @@ import "./App.css";
 
 const projects = [
   {
-    title: "Projeto",
-    description: ".",
-    image: "",
-    link: "#",
-    technologies: ["React", "JavaScript"],
+    title: "Hyper Power Store",
+    description:
+      "Um e-commerce completo desenvolvido para simular uma experiência real de compra, com catálogo de produtos, navegação entre páginas, gerenciamento de estado e diferentes fluxos de interação.",
+    image: "/hyper-power-store.png",
+    link: "https://hyper-power-store-wbfo.vercel.app/menu",
+    technologies: [
+      "React",
+      "JavaScript",
+      "API REST",
+      "JSON Server",
+      "Context API",
+    ],
   },
   {
-    title: "Projeto",
-    description: ".",
-    image: "",
-    link: "#",
-    technologies: ["React", "CSS"],
-  },
-  {
-    title: "Projeto",
-    description: ".",
-    image: "",
-    link: "#",
-    technologies: ["JavaScript", "API"],
+    title: "Jornada Viagens",
+    description:
+      "Uma interface desenvolvida com foco em uma experiência simples, acessível e adaptável, garantindo uma boa navegação tanto em dispositivos móveis quanto em telas maiores.",
+    image: "/jornada-viagens.png",
+    link: "https://gabriel-borges-damiani.github.io/jornada-viagens/",
+    technologies: ["Acessibilidade", "Responsividade", "Mobile First"],
   },
 ];
 
 const skills = [
-  "React",
-  "JavaScript",
   "HTML",
   "CSS",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Redux",
+  "Context API",
+  "Node.js",
+  "Java",
+  "API REST",
+  "JSON Server",
+  "SQL",
+  "Tailwind CSS",
+  "Styled Components",
+  "Figma",
   "Git",
   "GitHub",
-  "UI/UX",
+  "Acessibilidade",
   "Responsividade",
+  "Mobile First",
 ];
 
 const qualities = [
   {
     title: "Motivação",
-    short: ".",
-    long: ".",
+    short: "Minha base para seguir em frente.",
+    long: "Minha família, minha fé em Jesus Cristo e o desejo de construir uma vida profissional próspera são algumas das principais coisas que me motivam. Busco crescer não apenas como desenvolvedor, mas também como pessoa, construindo um futuro do qual eu possa me orgulhar.",
   },
   {
     title: "Criatividade",
-    short: ".",
-    long: ".",
+    short: "Ideias antes de soluções.",
+    long: "Sempre gostei de desenhar, imaginar coisas e pensar em novas ideias. Levo essa criatividade para o desenvolvimento, buscando diferentes maneiras de transformar uma ideia em uma interface interessante, intuitiva e visualmente agradável.",
   },
   {
     title: "Aprendizado",
-    short: ".",
-    long: ".",
+    short: "Sempre existe algo novo para descobrir.",
+    long: "Tenho curiosidade para entender como as coisas funcionam e gosto de aprender na prática. A tecnologia está sempre evoluindo, então procuro estudar, experimentar novas ferramentas e transformar cada projeto em uma oportunidade de aprendizado.",
   },
   {
     title: "Responsabilidade",
-    short: ".",
-    long: ".",
+    short: "Compromisso com aquilo que faço.",
+    long: "Quando assumo uma tarefa, procuro levar o trabalho a sério e entregar o melhor resultado que estiver ao meu alcance. Gosto de prestar atenção aos detalhes, cumprir minhas responsabilidades e aprender com os desafios que aparecem no caminho.",
   },
 ];
 
@@ -86,7 +100,7 @@ function App() {
       <main>
         <section id="inicio" className="hero section">
           <div className="hero-content">
-            <p className="eyebrow">DESENVOLVEDOR & CRIADOR</p>
+            <p className="hero-role">DESENVOLVEDOR FRONTEND</p>
 
             <h1>
               Gabriel
@@ -107,6 +121,15 @@ function App() {
               <a href="#contato" className="button button-secondary">
                 Entre em contato
               </a>
+              <a
+                href="/gabriel-borges-curriculo.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button button-secondary"
+              >
+                Baixar currículo
+                <span>↓</span>
+              </a>
             </div>
           </div>
 
@@ -115,7 +138,7 @@ function App() {
             <div className="photo-orbit orbit-two" />
 
             <div className="photo-placeholder">
-              <span>SUA FOTO</span>
+              <img src="/profile.png" alt="Gabriel Borges Damiani" />
             </div>
           </div>
         </section>
@@ -123,32 +146,36 @@ function App() {
         <section id="sobre" className="section about">
           <div className="section-heading">
             <span>01</span>
-            <h2>Sobre mim</h2>
+            <h2>Quem sou</h2>
           </div>
 
           <div className="about-content">
             <div className="about-title">
               <p>
-                Mais do que escrever código,
-                <strong> gosto de criar.</strong>
+                Desenvolvedor Frontend,
+                <strong> curioso por natureza.</strong>
               </p>
             </div>
 
             <div className="about-text">
               <p>
-                Olá! Eu sou Gabriel Borges Damiani. Sou apaixonado por
-                tecnologia, desenvolvimento e pela possibilidade de transformar
-                ideias em produtos digitais.
+                Meu nome é Gabriel Borges Damiani e sou desenvolvedor Frontend,
+                apaixonado por tecnologia e pela criação de experiências
+                digitais. Gosto de transformar ideias em interfaces funcionais,
+                bem estruturadas e agradáveis de usar.
               </p>
 
               <p>
-                Aqui você pode colocar sua trajetória, sua formação, seus
-                interesses e aquilo que acredita que diferencia seu trabalho.
+                Minha jornada na programação também é uma jornada de
+                aprendizado. Gosto de entender como as coisas funcionam,
+                experimentar novas tecnologias e buscar maneiras melhores de
+                resolver problemas.
               </p>
 
               <p>
-                Este espaço é sobre quem eu sou, o que faço e para onde quero
-                levar minha carreira.
+                Atualmente, busco uma oportunidade profissional onde eu possa
+                colocar meus conhecimentos em prática, aprender com uma equipe e
+                continuar evoluindo como desenvolvedor.
               </p>
             </div>
           </div>
@@ -209,14 +236,20 @@ function App() {
 
           <div className="skills-content">
             <p className="skills-intro">
-              Ferramentas e tecnologias que fazem parte da minha jornada.
+              Minha formação como desenvolvedor vai além do domínio de
+              tecnologias. Busco construir interfaces com código organizado,
+              atenção à experiência do usuário e preocupação com acessibilidade,
+              responsividade e Mobile First. Também valorizo princípios de
+              desenvolvimento como organização, reutilização de componentes,
+              manutenção do código e boas práticas, utilizando diferentes
+              ferramentas e tecnologias de acordo com as necessidades de cada
+              projeto.
             </p>
 
             <div className="skills-list">
               {skills.map((skill) => (
                 <div className="skill" key={skill}>
                   <span>{skill}</span>
-                  <span className="skill-arrow">↗</span>
                 </div>
               ))}
             </div>
@@ -253,35 +286,46 @@ function App() {
 
         <section id="contato" className="section contact">
           <div className="contact-inner">
-            <p className="eyebrow">VAMOS CONVERSAR?</p>
+            <p className="eyebrow">EM BUSCA DE NOVAS OPORTUNIDADES</p>
 
             <h2>
-              Tem uma ideia?
-              <span>Vamos construir.</span>
+              Pronto para o<span>próximo desafio.</span>
             </h2>
 
             <p>
-              Estou aberto a novos projetos, oportunidades e conversas sobre
-              tecnologia.
+              Estou em busca de uma oportunidade como desenvolvedor Frontend,
+              onde possa aplicar meus conhecimentos, continuar evoluindo
+              profissionalmente e contribuir para projetos e equipes que
+              valorizem tecnologia, aprendizado e boas práticas de
+              desenvolvimento.
             </p>
 
             <div className="contact-links">
-              <a href="#" className="contact-link">
+              <a
+                href="https://www.linkedin.com/in/gabriel-borgesd"
+                className="contact-link"
+              >
                 <span>LinkedIn</span>
                 <span>↗</span>
               </a>
 
-              <a href="#" className="contact-link">
+              <a href="https://wa.me/5511995691993" className="contact-link">
                 <span>WhatsApp</span>
                 <span>↗</span>
               </a>
 
-              <a href="mailto:seuemail@email.com" className="contact-link">
+              <a
+                href="mailto:damiani.gabri70@gmail.com"
+                className="contact-link"
+              >
                 <span>E-mail</span>
                 <span>↗</span>
               </a>
 
-              <a href="#" className="contact-link">
+              <a
+                href="https://github.com/Gabriel-Borges-Damiani"
+                className="contact-link"
+              >
                 <span>GitHub</span>
                 <span>↗</span>
               </a>

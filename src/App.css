@@ -208,6 +208,15 @@ a {
   letter-spacing: 0.15em;
 }
 
+.hero-role {
+  margin-bottom: 1.5rem;
+  color: var(--violet-light);
+  font-family: "DM Mono", monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+}
+
 .hero h1 {
   max-width: 800px;
   font-size: clamp(3.5rem, 8vw, 7rem);
@@ -274,7 +283,8 @@ a {
 
 .photo-placeholder {
   width: min(360px, 75vw);
-  aspect-ratio: 1;
+  height: min(360px, 75vw);
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
 
   display: grid;
@@ -283,14 +293,16 @@ a {
   background:
     radial-gradient(circle at 30% 30%, #272039, transparent 40%), #101016;
 
-  border: 1px solid rgba(167, 139, 250, 0.35);
+  border: 2px solid rgba(167, 139, 250, 0.7);
 
   box-shadow:
-    0 0 80px rgba(124, 58, 237, 0.2),
+    0 0 40px rgba(124, 58, 237, 0.25),
+    0 0 80px rgba(124, 58, 237, 0.15),
     inset 0 0 60px rgba(124, 58, 237, 0.08);
 
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 
 .photo-placeholder span {
@@ -299,22 +311,50 @@ a {
   font-size: 0.7rem;
 }
 
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 .photo-orbit {
   position: absolute;
-  border: 1px solid rgba(167, 139, 250, 0.15);
+  border: 1px solid rgba(167, 139, 250, 0.75);
   border-radius: 50%;
-  transform: rotate(-25deg);
+  pointer-events: none;
+  z-index: 1;
+
+  box-shadow:
+    0 0 8px rgba(139, 92, 246, 0.35),
+    0 0 18px rgba(139, 92, 246, 0.15);
 }
 
 .orbit-one {
   width: 430px;
   height: 220px;
+  transform: rotate(-25deg);
 }
 
 .orbit-two {
   width: 500px;
   height: 270px;
   transform: rotate(40deg);
+  border-color: rgba(167, 139, 250, 0.55);
+}
+
+.orbit-two::after {
+  content: "";
+  position: absolute;
+  inset: -35px;
+
+  border: 1px dotted rgba(167, 139, 250, 0.45);
+  border-radius: 50%;
+
+  transform: rotate(-8deg);
+
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.12);
 }
 
 .about-content {
